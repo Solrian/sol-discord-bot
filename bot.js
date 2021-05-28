@@ -2,15 +2,14 @@ const Discord = require('discord.js');
 const fs = require('fs');
 
 // develop
-const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+//const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 // master
-//
-//const Dotenv = require('dotenv').config();
-//const config = {
-	//"token" : process.env.BOT_TOKEN,
-	//"GUILD_ID" : process.env.GUILD_ID,
-	//"CHANNEL_ID" : process.env.CHANNEL_ID
-//}
+const Dotenv = require('dotenv').config();
+const config = {
+	"token" : process.env.BOT_TOKEN,
+	"GUILD_ID" : process.env.GUILD_ID,
+	"CHANNEL_ID" : process.env.CHANNEL_ID
+}
 
 var client = new Discord.Client();
 
